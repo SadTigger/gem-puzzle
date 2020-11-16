@@ -1,4 +1,5 @@
 const field = document.querySelector('body');
+const audio =  new Audio("../assets/sound.mp3");
 const cellSize = 100;
 let steps = 0;
 
@@ -68,6 +69,7 @@ for (let i = 1; i <= 15; i++) {
     field.append(cell);
 
     cell.addEventListener('click', () => {
+       audio.play();
        move(i);
     })
 }
